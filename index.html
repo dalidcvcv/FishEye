@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>FishEye</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
+    <title>Fisheye</title>
+  </head>
+  <body>
+    <header>
+        <img src="assets/images/logo.png" class="logo" alt="Logo de notre site de photographie"/>
+        <h1>Nos photographes</h1>
+    </header>
+    <main id="main">
+       <section class="photographer_section"></section> 
+    </main>
+    <script src="scripts/views/ListPhotographersView.js"></script>
+    <script src="scripts/Model.js"></script>
+    <script src="scripts/Controller.js"></script>
+    <script>
+      let controller = new Controller();
+      controller.initIndex();
+    </script>    
+  </body>
+</html>

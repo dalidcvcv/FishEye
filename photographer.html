@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>Fisheye - photographe</title>
+    <link href="css/photographer.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <button title="Aller à la page d'accueil" tabindex="0" id="btnGoToIndex" role="button">
+      <img src="assets/images/logo.png" class="logo" alt="logo de Fisheye" />
+    </button>
+    <main id="main">
+      <section class="photograph-header">
+        <button class="contact_button" aria-label="bouton d'ouverture du formulaire de contact"></button>
+      </section>
+      <!-- Liste déroulante & tri des médias -->
+      <section class="session-filter">
+        <label> Trier par </label>
+        <ul id="menuDrop" tabindex="0">
+          <li value="Popularité" tabindex="-1">Popularité</li>
+          <li value="Date" tabindex="-1">Date</li>
+          <li value="Titre" tabindex="-1">Titre</li>
+        </ul>
+      </section>
+      <section class="photograph-medias"></section>
+    </main>
+    <!--Formulaire de contact-->
+    <div id="contact_modal">
+      <div class="modal">
+        <header>
+          <h2 class="form_contact_title"></h2>
+          <img src="assets/icons/close.svg" class="close_Form" alt="Fermeture du formulaire de contact" />
+        </header>
+        <form class="form-contact">
+          <div>
+            <label for="prenom">Prénom:</label>
+            <input type="text" id="prenom" name="prenom" aria-describedby="firstName-validate" tabindex="1" />
+            <p class="error-message"></p>
+            <label for="nom">Nom:</label>
+            <input type="text" id="nom" name="nom" aria-describedby="lastName-validate" tabindex="2" />
+            <p class="error-message"></p>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" aria-describedby="email-validate" tabindex="3" />
+            <p class="error-message"></p>
+            <label for="message">Votre message:</label>
+            <textarea id="message" name="message" aria-describedby="message-validate" tabindex="4"></textarea>
+            <p class="error-message"></p>
+          </div>
+          <button class="contact_button_submit" aria-label="bouton d'envoi du formulaire de contact" tabindex="5"> Envoyer </button>
+        </form>
+      </div>
+    </div>
+    <!--Lightbox-->
+    <div class="modal-lightbox">
+      <div class="modal-content">
+        <span class="close" aria-label="bouton de cloture de la lightbox">
+          <strong class="fa-solid fa-xmark"></strong>
+        </span>
+        <span class="next" aria-label="bouton d'envoi vers le prochain madia">
+          <strong class="fa-solid fa-chevron-left"></strong>
+        </span>
+        <span class="preview" aria-label="bouton d'envoi vers le précédent media">
+          <strong class="fa-solid fa-chevron-right"></strong>
+        </span>
+        <div class="lightbox-media">
+        </div>
+      </div>
+    </div>
+    <!--Import des scripts JavaScript-->
+    <script src="scripts/views/indexRedirect.js"></script>
+    <script src="scripts/views/Lightbox.js"></script>
+    <script src="scripts/utils/MediaFactory.js"></script>
+    <script src="scripts/views/PhotographerView.js"></script>
+    <script src="scripts/utils/FormContact.js"></script>
+    <script src="scripts/Model.js"></script>
+    <script src="scripts/Controller.js"></script>
+    <script>
+      // Initialise le contrôleur et démarre l'application
+      let controllerPhotographer = new Controller();
+      controllerPhotographer.initPhotographer();
+    </script>
+  </body>
+</html>
