@@ -20,7 +20,7 @@ class MediaFactory {
     if (mediaType === "image") {
       mediaHtml = `<img src="${mediaSrc}" alt="${item.title}">`;
     } else if (mediaType === "video") {
-      mediaHtml = `<video src="${mediaSrc}" alt="${item.title}" type="video/mp4" controls></video>`;
+      mediaHtml = `<video src="${mediaSrc}" alt="${item.title}" type="video/mp4"></video>`;
     }
     return mediaHtml;
   }

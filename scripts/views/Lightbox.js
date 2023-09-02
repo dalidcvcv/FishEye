@@ -121,6 +121,7 @@ class Lightbox {
     // Ajout d'un focus si le média est une vidéo
     const videoTag = this.mediaContainer.querySelector("video");
     if (videoTag) {
+      videoTag.setAttribute("controls", "");
       videoTag.focus();
     }
   }

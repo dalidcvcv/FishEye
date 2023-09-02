@@ -6,8 +6,9 @@ body {
 #btnGoToIndex {
     background: none;
     border: none;
-    margin: 20px 0 30px 98px;
+    margin: 20px 0 0px 98px;
     padding: 0;
+    cursor: pointer;
 }
 
 #main {
@@ -390,6 +391,7 @@ video {
     font-weight: bold;
 }
 
+/* Liste déroulante */
 #menuDrop {
     width: 170px;
     list-style-type: none;
