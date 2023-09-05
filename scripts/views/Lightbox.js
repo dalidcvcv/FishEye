@@ -122,6 +122,8 @@ class Lightbox {
     const videoTag = this.mediaContainer.querySelector("video");
     if (videoTag) {
       videoTag.focus();
+      videoTag.setAttribute("controls", "");
+
     }
   }
 }
