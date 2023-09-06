@@ -22,4 +22,4 @@ git clone https://github.com/dalidcvcv/Front-End-Fisheye-main-.git
 
 You can access the website Fisheye by following this URL:
 
-https://dalidcvcv.github.io/Front-End-Fisheye-main-/index.html
+https://dalidcvcv.github.io/FishEye/
